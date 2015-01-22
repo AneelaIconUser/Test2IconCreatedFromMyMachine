@@ -216,6 +216,4 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 *.cache
-*.cache
-*.cache
-*.cache
+
