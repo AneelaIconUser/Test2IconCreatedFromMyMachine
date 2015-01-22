@@ -38,7 +38,7 @@ Public Class ManageController
     '
     ' GET: /Manage/Index
     Public Async Function Index(message As System.Nullable(Of ManageMessageId)) As Task(Of ActionResult)
-        ViewBag.StatusMessage = If(message = ManageMessageId.ChangePasswordSuccess, "Your password has been changed.", If(message = ManageMessageId.SetPasswordSuccess, "Your password has been set.", If(message = ManageMessageId.SetTwoFactorSuccess, "Your two-factor authentication provider has been set.", If(message = ManageMessageId.[Error], "An error has occurred.", If(message = ManageMessageId.AddPhoneSuccess, "Your phone number was added.", If(message = ManageMessageId.RemovePhoneSuccess, "Your phone number was removed.", ""))))))
+        ViewBag.StatusMessage = If(message = ManageMessageId.ChangePasswordSuccess, "Your password has been changed. Few More changes", If(message = ManageMessageId.SetPasswordSuccess, "Your password has been set.", If(message = ManageMessageId.SetTwoFactorSuccess, "Your two-factor authentication provider has been set.", If(message = ManageMessageId.[Error], "An error has occurred.", If(message = ManageMessageId.AddPhoneSuccess, "Your phone number was added.", If(message = ManageMessageId.RemovePhoneSuccess, "Your phone number was removed.", ""))))))
 
         Dim userId = User.Identity.GetUserId()
         Dim model = New IndexViewModel() With {
